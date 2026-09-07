@@ -30,7 +30,7 @@ class McapHandler(logging.Handler):
         """
         super().__init__()
         self._file: Path | TextIOWrapper = file
-        self.writer: None | Writer = None
+        self.writer: Writer | None = None
         self._open()
 
     def emit(self, record: logging.LogRecord) -> None:

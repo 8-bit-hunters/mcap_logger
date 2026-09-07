@@ -58,7 +58,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 
 !!! note "Simulated Thermostat"
@@ -163,7 +162,6 @@ for data in THERMOSTAT_DATA:
     humidity = data["humid"]
 
     thermostat_data = ThermostatData(temperature=temperature, humidity=humidity)
-
 ```
 
 To log the `thermostat_data`, we need to specify a _Topic_ for our log. In this case, we will call it `/thermostat`
@@ -172,7 +170,7 @@ will log the data in its argument into the log file. So with calling `topic_logg
 can log any ProtoBuf data into our log file.
 
 ```python title="thermostat.py"
-topic_logger.topic('/thermostat').write(thermostat_data)
+topic_logger.topic("/thermostat").write(thermostat_data)
 ```
 
 To make it a bit more interesting, let's log a warning message when the `temperature` goes below zero!
@@ -223,7 +221,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 
 ## Running the thermostat
