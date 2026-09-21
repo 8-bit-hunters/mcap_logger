@@ -55,7 +55,6 @@ from mcap_logger.mcap_handler import McapHandler
 def main():
     logger = logging.getLogger("mcap_logger")
     print("Hello from mcap-logger-tutorial!")
-
 ```
 
 Then we will define the log file we want to create. To do that, we need to import `Path` and
@@ -80,7 +79,6 @@ def main():
     log_file = Path("hello.mcap")
     mcap_handler = McapHandler(log_file)
     print("Hello from mcap-logger-tutorial!")
-
 ```
 
 When we created our handler then we have to add it to the logger. This means that when the logger logs a message then it
@@ -112,7 +110,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 
 ## Create the log file
