@@ -62,7 +62,6 @@ def main():  # noqa: ANN201
 
 if __name__ == "__main__":
     main()
-
 ```
 
 The `application.py` is just our `examples/hello.py` example, and it only logs a log message.
@@ -90,7 +89,6 @@ def get_thermostat_data():
 if __name__ == "__main__":
     for data in get_thermostat_data():
         print(data)
-
 ```
 
 The `library.py` is a modification of our `examples/thermostat.py` script. In this version we have the
@@ -145,7 +143,7 @@ top-level logger of the library like the following code.
 ```python
 import logging
 
-logging.getLogger('foo').addHandler(logging.NullHandler())
+logging.getLogger("foo").addHandler(logging.NullHandler())
 ```
 
 In our case, we have only one library script, so we will configure our logger in it. In the `library.py` we import the
@@ -215,7 +213,6 @@ if __name__ == "__main__":
 
     for data in get_thermostat_data():
         log.info(data)
-
 ```
 
 !!! note
@@ -251,7 +248,6 @@ def get_logger(name: str, file: Path) -> logging.Logger:
     library_logger.addHandler(mcap_handler)
 
     return logger
-
 ```
 
 When we run the application now, we should see all the log messages on the console and in the `.mcap` file.
@@ -331,7 +327,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 
 Let's say that we want to log the thermostat data from our application to the mcap file. In this case, we should import
@@ -383,7 +378,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 
 In this scenario, the library is only used to get the data from our "sensor", and because of this it is the applications
@@ -443,7 +437,6 @@ if __name__ == "__main__":
     logging.getLogger("library").setLevel(logging.DEBUG)
 
     thermostat_monitor()
-
 ```
 
 The monitor function can be imported by another script and run it as a process until all the data is
@@ -491,7 +484,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 
 When we run the application, then we should see the info and warning messages, and in the `.mcap` file we should see all
