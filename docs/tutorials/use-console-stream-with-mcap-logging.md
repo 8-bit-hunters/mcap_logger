@@ -51,7 +51,6 @@ def main():  # noqa: ANN201
 
 if __name__ == "__main__":
     main()
-
 ```
 
 ## Configure console logging
@@ -107,7 +106,6 @@ def main():  # noqa: ANN201
 
 if __name__ == "__main__":
     main()
-
 ```
 
 ## Running the script
@@ -159,7 +157,6 @@ def main():  # noqa: ANN201
 
 if __name__ == "__main__":
     main()
-
 ```
 
 With this, we have a simple example that how we can configure a logger with both console and MCAP logging.
