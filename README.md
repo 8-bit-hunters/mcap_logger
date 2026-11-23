@@ -72,7 +72,6 @@ logger.setLevel("DEBUG")
 # Log Protobuf data
 sensor_message = SensorData(temperature=25, humidity=65)
 TopicLogger("mcap_logger").topic("/sensor_data").write(sensor_message)
-
 ```
 
 ![](docs/assets/demo_log_in_foxglove.png)
